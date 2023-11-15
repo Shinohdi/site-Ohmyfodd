@@ -2,16 +2,44 @@
   font-family: "Roboto", sans-serif;
 }
 
+/******* General *******/
 .flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.directionRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.directionColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 body {
   margin: 0;
 }
 
+main {
+  background-color: #F6F6F6;
+}
+
+/******* Header *******/
 header {
   display: flex;
   flex-direction: column;
@@ -29,9 +57,98 @@ header {
   height: 36px;
 }
 
+/******* Main *******/
 .location {
   width: 100%;
   color: #353535;
   background-color: #EAEAEA;
   gap: 10px;
+}
+
+.explore {
+  padding-top: 15px;
+  padding-bottom: 50px;
+}
+.explore__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.explore__content--txt {
+  text-align: center;
+}
+.explore__content--button {
+  color: white;
+  box-sizing: border-box;
+  padding: 15px 15px;
+  border-radius: 25px;
+  background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
+.fonction {
+  padding-top: 15px;
+  padding-bottom: 30px;
+  background-color: white;
+  padding-left: 20px;
+}
+.fonction__content--button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.fonction__content--button .button {
+  position: relative;
+  background-color: #F6F6F6;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+  padding: 8px 8px;
+  width: 90%;
+  gap: 20px;
+}
+.fonction__content--button .button i {
+  color: #7E7E7E;
+  width: 15px;
+  padding-left: 30px;
+}
+.fonction__content--button .button .number {
+  color: white;
+  font-size: 14px;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: -10px;
+  border-radius: 25px;
+  background-color: #9356DC;
+}
+
+.restaurants {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+/******* Footer *******/
+footer {
+  background-color: #353535;
+  color: white;
+}
+
+.link {
+  padding: 5px 0px 10px 25px;
+}
+.link__content {
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+}
+.link__content--txt {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.link__content--txt i {
+  width: 15px;
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */

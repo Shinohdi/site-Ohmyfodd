@@ -105,10 +105,20 @@ header {
 .explore__content--button {
   color: white;
   box-sizing: border-box;
-  padding: 15px 15px;
   border-radius: 25px;
   background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+.explore__content--button .fond {
+  padding: 15px 15px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  transition: background-color box-shadow;
+  transition-duration: 300ms;
+}
+.explore__content--button .fond:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
 .fonction {
@@ -170,7 +180,8 @@ header {
   gap: 20px;
 }
 .restaurants__content--cards a {
-  width: 90%;
+  display: block;
+  position: relative;
 }
 .restaurants__content--cards img {
   width: 100%;
@@ -179,11 +190,12 @@ header {
   border-top-left-radius: 20px;
 }
 .restaurants__content--cards .card {
+  width: 90%;
   position: relative;
 }
 .restaurants__content--cards .card .new {
   position: absolute;
-  left: 275px;
+  right: 20px;
   top: 10px;
   color: #008766;
   background-color: #99E2D0;
@@ -212,8 +224,16 @@ header {
 .restaurants__content--cards .card__content--txt-subtitle {
   margin-top: 3px;
 }
-.restaurants__content--cards .card__content--icon {
-  margin-right: 5px;
+.restaurants__content--cards .card__heart {
+  position: absolute;
+  bottom: 28px;
+  right: 20px;
+}
+.restaurants__content--cards .card__heart .fa-solid {
+  display: none;
+}
+.restaurants__content--cards .card__heart:active {
+  color: #008766;
 }
 
 /******* Footer *******/

@@ -119,10 +119,26 @@ header{
         &--button{
             color: white;
             box-sizing: border-box;
-            padding: 15px 15px;
             border-radius: 25px;
             background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
-            box-shadow: 0px 4px 10px 0px #00000040;
+
+            .fond{  
+                padding: 15px 15px;
+                border-radius: 25px;
+
+                background-color: rgba($color: #ffffff, $alpha: 0);
+                box-shadow: 0px 4px 10px 0px #00000040;
+
+                transition: background-color box-shadow;
+                transition-duration: 300ms;
+
+                &:hover{
+                    background-color: rgba($color: #ffffff, $alpha: 0.15);
+                    box-shadow: 0px 4px 15px 0px #00000059;
+
+
+                }
+            }
 
         }
 
@@ -197,7 +213,9 @@ header{
             gap: 20px;
 
             a{
-                width: 90%;
+                display: block;
+                position: relative;
+
             }
 
             img{
@@ -208,11 +226,12 @@ header{
             }
 
             .card{
+                width: 90%;
                 position: relative;
 
                 .new{
                     position: absolute;
-                    left: 275px;
+                    right: 20px;
                     top: 10px;
         
                     color: #008766;
@@ -248,9 +267,20 @@ header{
                             margin-top: 3px;
                         }
                     }
+                }
+                
+                &__heart{
+                    position: absolute;
+                    bottom: 28px;
+                    right: 20px;
 
-                    &--icon{
-                        margin-right: 5px;
+                    .fa-solid{
+                        display: none;
+                    }
+
+                    &:active{
+                        color: #008766;
+
                     }
                 }
             }

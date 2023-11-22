@@ -1,3 +1,8 @@
+/******* Variable *******/
+.euro {
+  color: #353535;
+}
+
 header {
   box-shadow: none;
 }
@@ -26,12 +31,73 @@ header .content .fa-arrow-left {
   position: relative;
   z-index: 1;
   padding-top: 20px;
+  padding-bottom: 50px;
   box-sizing: border-box;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   background-color: #F6F6F6;
 }
-.menu h1 {
-  margin-left: 20px;
+.menu__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__title h1 {
   font-size: 28px;
+  padding-left: 20px;
+}
+.menu__title i {
+  padding-right: 40px;
+}
+.menu__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu__button {
+  display: flex;
+  justify-content: center;
+}
+
+.type {
+  margin-top: 35px;
+}
+.type--title {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 10px;
+}
+.type--title p {
+  width: 40px;
+  box-sizing: border-box;
+  padding-bottom: 5px;
+  border-bottom: 3px solid;
+  border-color: #99E2D0;
+}
+.type--dishes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 13px;
+  gap: 15px;
+}
+.type--dishes .dish {
+  width: 95%;
+  height: 72px;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.type--dishes .dish__txt--title {
+  font-size: 18px;
+}
+.type--dishes .dish__txt--subtitle {
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
 }/*# sourceMappingURL=menu.css.map */

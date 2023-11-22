@@ -1,3 +1,17 @@
+/******* Variable *******/
+
+$background-maincolor : #F6F6F6;
+$background-secondcolor : white;
+$background-thirdcolor: #353535;
+
+$green-maincolor: #008766;
+$green-secondcolor: #99E2D0;
+
+
+.euro{
+    color: $background-thirdcolor;
+}
+
 header{
     box-shadow: none;
 
@@ -29,13 +43,88 @@ header{
     z-index: 1;
 
     padding-top: 20px;
+    padding-bottom: 50px;
     box-sizing: border-box;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
     background-color: #F6F6F6;
     
-    h1{
-        margin-left: 20px;
-        font-size: 28px;
+    &__title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        h1{
+            font-size: 28px;
+            padding-left: 20px;
+        }
+
+        i{
+            padding-right: 40px;
+        }
+    }
+    
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__button{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.type{
+    margin-top: 35px;
+
+    &--title{
+        width: fit-content;
+        margin-left: 10px;
+
+        p{
+            width: 40px;
+            box-sizing: border-box;
+            padding-bottom: 5px;
+            border-bottom: 3px solid;
+            border-color: $green-secondcolor;
+        }
+    }
+
+    &--dishes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 13px;
+        gap: 15px;
+
+        .dish{
+            width: 95%;
+            height: 72px;
+
+            box-sizing: border-box;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0px 4px 15px 0px #0000001A;
+            
+
+            &__txt{
+                &--title{
+                    font-size: 18px;
+                }
+
+                &--subtitle{
+                    padding-top: 5px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    font-size: 15px;
+                }
+            }
+        }
     }
 }

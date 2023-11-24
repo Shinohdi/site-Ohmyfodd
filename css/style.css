@@ -136,7 +136,7 @@ header {
 .fonction__content {
   margin-top: 25px;
 }
-.fonction__content--button {
+.fonction__content--buttons {
   margin-top: 25px;
   margin-left: 10px;
   display: flex;
@@ -144,7 +144,7 @@ header {
   align-items: center;
   gap: 30px;
 }
-.fonction__content--button .button {
+.fonction__content--buttons .button {
   position: relative;
   background-color: #F6F6F6;
   box-sizing: border-box;
@@ -153,15 +153,15 @@ header {
   padding: 20px 20px;
   width: 90%;
 }
-.fonction__content--button .button i {
+.fonction__content--buttons .button i {
   color: #7E7E7E;
   padding-right: 20px;
   width: 15px;
 }
-.fonction__content--button .button .fa-store {
+.fonction__content--buttons .button .fa-store {
   color: #9356DC;
 }
-.fonction__content--button .button .number {
+.fonction__content--buttons .button .number {
   color: white;
   font-size: 14px;
   width: 25px;
@@ -186,18 +186,18 @@ header {
   align-items: center;
   gap: 20px;
 }
-.restaurants__content--cards a {
-  display: block;
+.restaurants__content--cards .card {
+  width: 90%;
   position: relative;
 }
-.restaurants__content--cards img {
+.restaurants__content--cards .card img {
   width: 100%;
   height: 150px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
-.restaurants__content--cards .card {
-  width: 90%;
+.restaurants__content--cards .card a {
+  display: block;
   position: relative;
 }
 .restaurants__content--cards .card .new {
@@ -241,6 +241,7 @@ header {
 }
 .restaurants__content--cards .card__heart:active {
   color: #008766;
+  background-color: #008766;
 }
 
 /******* Footer *******/
@@ -265,4 +266,42 @@ footer {
 .link__content--txt i {
   width: 15px;
   margin-right: 10px;
+}
+
+@media (min-width: 1024px) {
+  header {
+    box-shadow: none;
+  }
+  .explore__content--txt h2 {
+    font-size: 40px;
+  }
+  .explore__content--txt p {
+    margin-top: 40px;
+  }
+  .fonction {
+    display: flex;
+    justify-content: center;
+  }
+  .fonction__content--buttons {
+    width: 1014px;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .fonction__content--buttons .button {
+    max-width: 300px;
+  }
+  .restaurants {
+    display: flex;
+    justify-content: center;
+  }
+  .restaurants__content--cards {
+    width: 1024px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+  .restaurants__content--cards .card {
+    width: 45%;
+  }
 }/*# sourceMappingURL=style.css.map */

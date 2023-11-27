@@ -100,4 +100,40 @@ header .content .fa-arrow-left {
   flex-direction: row;
   justify-content: space-between;
   font-size: 15px;
+}
+
+@media (min-width: 1024px) {
+  header {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1490196078);
+  }
+  main {
+    background-color: white;
+  }
+  .rphoto {
+    height: 320px;
+  }
+  .rphoto img {
+    height: 350px;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu {
+    width: 1024px;
+  }
+  .menu__title {
+    justify-content: center;
+  }
+  .menu__title i {
+    padding-right: 0;
+    padding-left: 15px;
+  }
+  .menu__content {
+    align-items: center;
+  }
+  .type {
+    width: 634px;
+  }
 }/*# sourceMappingURL=menu.css.map */

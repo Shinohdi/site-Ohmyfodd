@@ -315,17 +315,25 @@ footer{
     padding: 20px 0px 10px 25px;
     
     &__content{
-        margin-top: 10px;
         display: flex;
         flex-direction: column;
-        line-height: 30px;
+        
+        .title{
+            margin-bottom: 10px;
+        }
 
-        &--txt{
-            width: fit-content;
+        &--liens{
 
-            i{
-                width: 15px;
-                margin-right: 10px;               
+            .group-lien{
+                .text-lien{
+                    margin-top: 10px;
+                    width: fit-content;
+        
+                    i{
+                        width: 15px;
+                        margin-right: 10px;               
+                    }
+                }
             }
         }
     }
@@ -372,6 +380,7 @@ footer{
     .restaurants{
         display: flex;
         justify-content: center;
+        padding-bottom: 25px;
 
         &__content{
             &--cards{
@@ -386,6 +395,33 @@ footer{
             }
         }
 
+    }
+
+    .link{
+        padding: 50px 45px 20px 0px;
+
+        &__content{
+            flex-direction: row-reverse;
+            align-items: flex-end;
+
+            .title{
+                margin-bottom: 0;
+                margin-left: 50px;
+            }
+
+            &--liens{
+                margin-right: 50px;
+                display: flex;
+                flex-direction: row;
+                gap: 50px;
+
+                .group-lien{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 15px;
+                }
+            }
+        }
     }
     
 }

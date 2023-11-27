@@ -127,4 +127,52 @@ header{
             }
         }
     }
+
+    
+}
+
+@media (min-width: 1024px) {
+    header{
+        box-shadow: 0px 4px 4px #00000026;
+    }
+
+    main{
+        background-color: $background-secondcolor;
+    }
+
+    .rphoto{
+        height: 320px;
+        img{
+            height: 350px;
+        }
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .menu{
+        width: 1024px;
+
+        &__title{
+            justify-content: center;
+            
+            i{
+                padding-right: 0;
+                padding-left: 15px;
+            }
+        }
+
+        &__content{
+            align-items: center;
+        }
+    }
+
+    .type{
+        width: 634px;
+    }   
+
 }

@@ -375,19 +375,27 @@ header{
                 }
                 
                 &__heart{
-                    position: absolute;
+                    position: relative;
                     bottom: 28px;
                     right: 20px;
 
                     .fa-solid{
-                        display: none;
+                        position: absolute;
+                        opacity: 0;
+                        bottom: 8px;
+                        right: 10px;
                     }
 
-                    &:active{
+                    .fa-regular{
+                        position: absolute;
+                        bottom: 8px;
+                        right: 10px;
+                    }
+
+                    &:focus{
                         color: #008766;
-                        background-color: #008766;
-
                     }
+
                 }
             }
         }

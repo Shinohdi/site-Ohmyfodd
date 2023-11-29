@@ -298,16 +298,23 @@ header {
   margin-top: 3px;
 }
 .restaurants__content--cards .card__heart {
-  position: absolute;
+  position: relative;
   bottom: 28px;
   right: 20px;
 }
 .restaurants__content--cards .card__heart .fa-solid {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  bottom: 8px;
+  right: 10px;
 }
-.restaurants__content--cards .card__heart:active {
+.restaurants__content--cards .card__heart .fa-regular {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+}
+.restaurants__content--cards .card__heart:focus {
   color: #008766;
-  background-color: #008766;
 }
 
 /******* Footer *******/

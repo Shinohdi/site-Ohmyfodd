@@ -1,8 +1,5 @@
 /******* Variable *******/
-.euro {
-  color: #353535;
-}
-
+/******* CSS *******/
 header {
   box-shadow: none;
 }
@@ -83,23 +80,53 @@ header .content .fa-arrow-left {
   gap: 15px;
 }
 .type--dishes .dish {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 95%;
   height: 72px;
   box-sizing: border-box;
-  padding: 15px;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
 }
-.type--dishes .dish__txt--title {
-  font-size: 18px;
-}
-.type--dishes .dish__txt--subtitle {
-  padding-top: 5px;
+.type--dishes .dish__txt {
+  width: 95%;
+  margin-top: 15px;
+  margin-left: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.type--dishes .dish__txt--plate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.type--dishes .dish__txt--plate-title {
+  font-size: 18px;
+}
+.type--dishes .dish__txt--plate-subtitle {
+  padding-top: 5px;
   font-size: 15px;
+}
+.type--dishes .dish__txt .euro {
+  position: relative;
+  top: 27px;
+  color: #353535;
+  font-size: 15px;
+  margin-right: 10px;
+}
+.type--dishes .dish__check {
+  width: 15%;
+  min-width: 59px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 100%;
+  background-color: #99E2D0;
+}
+.type--dishes .dish__check .fa-circle-check {
+  color: white;
 }
 
 @media (min-width: 1024px) {

@@ -47,19 +47,22 @@ header{
     background-color: #F6F6F6;
     
     &__title{
+        width: 100%;
+
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
 
         h1{
             font-size: 28px;
             padding-left: 20px;
         }
 
-        i{
-            padding-right: 40px;
+        .heart{
+            right: 50px;
+            top: 10px
         }
+
     }
     
     &__content{
@@ -99,13 +102,10 @@ header{
 
         .dish{
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
 
             width: 95%;
             height: 72px;
 
-            box-sizing: border-box;
             border-radius: 15px;
             background-color: white;
             box-shadow: 0px 4px 15px 0px #0000001A;
@@ -113,56 +113,71 @@ header{
 
             &__txt{
                 width: 95%;
-                margin-top: 15px;
                 margin-left: 15px;
 
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                &--plate{
+                flex-direction: column;
+                justify-content: center;
+                
+                overflow: hidden;
+                white-space: nowrap;
+                
+                &--title{
+                    font-size: 18px;
 
                     overflow: hidden;
-                    white-space: nowrap;
                     text-overflow: ellipsis;
-
-                    &-title{
-                        font-size: 18px;
-                    }
-    
-                    &-subtitle{
-                        padding-top: 5px;
-    
-                        font-size: 15px;             
-                    }
                 }
 
-                .euro{
-                    position: relative;
-                    top: 27px;
-                    color: $background-thirdcolor;
-                    font-size: 15px;             
-                
-                    margin-right: 10px;
+                &--subtitle{
+                    padding-top: 5px;
+                    font-size: 15px;
+
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
+            }
+
+            .euro{
+                position: relative;
+                top: 41px;
+                color: $background-thirdcolor;
+                font-size: 15px;             
+            
+                margin-right: 10px;
+                margin-left: 10px;
             }
 
             &__check{
-                width: 15%;
-                min-width: 59px;
+                width: 0;
+                max-width: 80px;
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
                 height: 100%;
-                background-color: $green-secondcolor;
 
+                background-color: $green-secondcolor;
+                transition : width 0.3s ease-in-out;
+                
                 .fa-circle-check{
                     color: $background-secondcolor;
+                    opacity: 0;
+
+                    transition: opacity 0.1s 0.05s ease-in-out;
+                }
+            }
+
+            &:hover{
+                .dish__check{
+                    width: 23%;
+
+                    .fa-circle-check{
+                        opacity: 1;
+                    }
+                  
                 }
             }
         }
-    }
-
-    
+    }   
 }
 
 @media (min-width: 1024px) {
@@ -192,11 +207,12 @@ header{
         width: 1024px;
 
         &__title{
+            gap: 20px;
+
             justify-content: center;
-            
-            i{
-                padding-right: 0;
-                padding-left: 15px;
+
+            .heart{
+                right: 0;
             }
         }
 

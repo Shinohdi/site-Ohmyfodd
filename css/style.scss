@@ -374,50 +374,48 @@ header{
                     }
                 }
                 
-                &__heart{
-                    position: relative;
-
-                    .fa-solid{
-                        position: absolute;
-                        opacity: 0;
+                .heart{
+                    .fa-heart{
                         bottom: 20px;
                         right: 25px;
-
-                        font-size: 1.5rem;
-
-                        background: linear-gradient(0deg, $purple-maincolor -11.44%, #FF79DA 123.93%);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-
-                        transition: .3s ease-in-out;
-
-
-                    }
-
-                    .fa-regular{
-                        position: absolute;
-                        opacity: 1;
-                        bottom: 20px;
-                        right: 25px;
-
-                        font-size: 1.5rem;
-
-
-                        transition: .2s ease-in-out;
-                    }
-
-                    &:hover{
-                        .fa-regular{
-                            opacity: 0;
-                        }
-
-                        .fa-solid{
-                            opacity: 1;
-                        }
                     }
 
                 }
             }
+        }
+    }
+}
+
+.heart{
+    position: relative;
+    font-size: 1.5rem;
+
+    .fa-heart{
+        position: absolute;
+        transition: opacity .2s ease-in-out;
+
+    }
+
+    .fa-solid{
+        opacity: 0;
+
+        background: linear-gradient(0deg, $purple-maincolor -11.44%, #FF79DA 123.93%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
+    .fa-regular{
+        opacity: 1;
+    }
+
+    &:hover{
+        .fa-regular{
+            opacity: 0;
+        }
+
+        .fa-solid{
+            opacity: 1;
         }
     }
 }

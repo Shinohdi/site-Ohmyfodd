@@ -35,17 +35,18 @@ header .content .fa-arrow-left {
   background-color: #F6F6F6;
 }
 .menu__title {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
 .menu__title h1 {
   font-size: 28px;
   padding-left: 20px;
 }
-.menu__title i {
-  padding-right: 40px;
+.menu__title .heart {
+  right: 50px;
+  top: 10px;
 }
 .menu__content {
   display: flex;
@@ -81,52 +82,59 @@ header .content .fa-arrow-left {
 }
 .type--dishes .dish {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   width: 95%;
   height: 72px;
-  box-sizing: border-box;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
 }
 .type--dishes .dish__txt {
   width: 95%;
-  margin-top: 15px;
   margin-left: 15px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.type--dishes .dish__txt--plate {
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
   white-space: nowrap;
+}
+.type--dishes .dish__txt--title {
+  font-size: 18px;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
-.type--dishes .dish__txt--plate-title {
-  font-size: 18px;
-}
-.type--dishes .dish__txt--plate-subtitle {
+.type--dishes .dish__txt--subtitle {
   padding-top: 5px;
   font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.type--dishes .dish__txt .euro {
+.type--dishes .dish .euro {
   position: relative;
-  top: 27px;
+  top: 41px;
   color: #353535;
   font-size: 15px;
   margin-right: 10px;
+  margin-left: 10px;
 }
 .type--dishes .dish__check {
-  width: 15%;
-  min-width: 59px;
+  width: 0;
+  max-width: 80px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   height: 100%;
   background-color: #99E2D0;
+  transition: width 0.3s ease-in-out;
 }
 .type--dishes .dish__check .fa-circle-check {
   color: white;
+  opacity: 0;
+  transition: opacity 0.1s 0.05s ease-in-out;
+}
+.type--dishes .dish:hover .dish__check {
+  width: 23%;
+}
+.type--dishes .dish:hover .dish__check .fa-circle-check {
+  opacity: 1;
 }
 
 @media (min-width: 1024px) {
@@ -151,11 +159,11 @@ header .content .fa-arrow-left {
     width: 1024px;
   }
   .menu__title {
+    gap: 20px;
     justify-content: center;
   }
-  .menu__title i {
-    padding-right: 0;
-    padding-left: 15px;
+  .menu__title .heart {
+    right: 0;
   }
   .menu__content {
     align-items: center;

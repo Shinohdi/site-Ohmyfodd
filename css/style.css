@@ -297,32 +297,32 @@ header {
 .restaurants__content--cards .card__content--txt-subtitle {
   margin-top: 3px;
 }
-.restaurants__content--cards .card__heart {
-  position: relative;
-}
-.restaurants__content--cards .card__heart .fa-solid {
-  position: absolute;
-  opacity: 0;
+.restaurants__content--cards .card .heart .fa-heart {
   bottom: 20px;
   right: 25px;
+}
+
+.heart {
+  position: relative;
   font-size: 1.5rem;
+}
+.heart .fa-heart {
+  position: absolute;
+  transition: opacity 0.2s ease-in-out;
+}
+.heart .fa-solid {
+  opacity: 0;
   background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: 0.3s ease-in-out;
 }
-.restaurants__content--cards .card__heart .fa-regular {
-  position: absolute;
+.heart .fa-regular {
   opacity: 1;
-  bottom: 20px;
-  right: 25px;
-  font-size: 1.5rem;
-  transition: 0.2s ease-in-out;
 }
-.restaurants__content--cards .card__heart:hover .fa-regular {
+.heart:hover .fa-regular {
   opacity: 0;
 }
-.restaurants__content--cards .card__heart:hover .fa-solid {
+.heart:hover .fa-solid {
   opacity: 1;
 }
 

@@ -69,6 +69,20 @@ header{
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        .entrees{
+            animation-delay: 0.25s;
+        }
+    
+        .plats{
+            animation-delay: 0.5s;
+    
+        }
+    
+        .desserts{
+            animation-delay: 0.75s;
+    
+        }
     }
 
     &__button{
@@ -77,8 +91,22 @@ header{
     }
 }
 
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
 .type{
     margin-top: 35px;
+    opacity: 0;
+    animation : appear 0.5s ease-in-out forwards;
 
     &--title{
         width: fit-content;

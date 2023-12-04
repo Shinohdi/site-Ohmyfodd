@@ -53,13 +53,32 @@ header .content .fa-arrow-left {
   flex-direction: column;
   justify-content: center;
 }
+.menu__content .entrees {
+  animation-delay: 0.25s;
+}
+.menu__content .plats {
+  animation-delay: 0.5s;
+}
+.menu__content .desserts {
+  animation-delay: 0.75s;
+}
 .menu__button {
   display: flex;
   justify-content: center;
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .type {
   margin-top: 35px;
+  opacity: 0;
+  animation: appear 0.5s ease-in-out forwards;
 }
 .type--title {
   width: -moz-fit-content;

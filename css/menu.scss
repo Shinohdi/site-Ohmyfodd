@@ -130,7 +130,7 @@ header{
 
         .dish{
             display: flex;
-
+            overflow: hidden;
             width: 95%;
             height: 72px;
 
@@ -147,20 +147,19 @@ header{
                 flex-direction: column;
                 justify-content: center;
                 
-                overflow: hidden;
                 white-space: nowrap;
+                overflow: hidden;
                 
                 &--title{
                     font-size: 18px;
-
-                    overflow: hidden;
-                    text-overflow: ellipsis;
                 }
 
                 &--subtitle{
                     padding-top: 5px;
                     font-size: 15px;
+                }
 
+                &--title, &--subtitle{
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
@@ -172,36 +171,36 @@ header{
                 color: $background-thirdcolor;
                 font-size: 15px;             
             
-                margin-right: 10px;
+                margin-right: -4rem;
                 margin-left: 10px;
+
+                transition : margin-right 0.3s ease-in-out;
+
             }
 
             &__check{
-                width: 0;
+                width: 23%;
                 max-width: 80px;
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
                 height: 100%;
 
+                transform: translateX(80px);
                 background-color: $green-secondcolor;
-                transition : width 0.3s ease-in-out;
+                transition : transform 0.3s ease-in-out;
                 
                 .fa-circle-check{
                     color: $background-secondcolor;
-                    opacity: 0;
-
-                    transition: opacity 0.1s 0.05s ease-in-out;
                 }
             }
 
             &:hover{
                 .dish__check{
-                    width: 23%;
+                    transform: translateX(0);
+                }
 
-                    .fa-circle-check{
-                        opacity: 1;
-                    }
-                  
+                .euro{
+                    margin-right: 0.5rem;
                 }
             }
         }
@@ -251,6 +250,14 @@ header{
 
     .type{
         width: 634px;
+
+        &--dishes{
+            .dish{
+                &__check{
+                    transform: translateX(100px);
+                }
+            }
+        }
     }   
 
 }

@@ -101,6 +101,7 @@ header .content .fa-arrow-left {
 }
 .type--dishes .dish {
   display: flex;
+  overflow: hidden;
   width: 95%;
   height: 72px;
   border-radius: 15px;
@@ -113,17 +114,17 @@ header .content .fa-arrow-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
   white-space: nowrap;
+  overflow: hidden;
 }
 .type--dishes .dish__txt--title {
   font-size: 18px;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .type--dishes .dish__txt--subtitle {
   padding-top: 5px;
   font-size: 15px;
+}
+.type--dishes .dish__txt--title, .type--dishes .dish__txt--subtitle {
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -132,28 +133,28 @@ header .content .fa-arrow-left {
   top: 41px;
   color: #353535;
   font-size: 15px;
-  margin-right: 10px;
+  margin-right: -4rem;
   margin-left: 10px;
+  transition: margin-right 0.3s ease-in-out;
 }
 .type--dishes .dish__check {
-  width: 0;
+  width: 23%;
   max-width: 80px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   height: 100%;
+  transform: translateX(80px);
   background-color: #99E2D0;
-  transition: width 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 .type--dishes .dish__check .fa-circle-check {
   color: white;
-  opacity: 0;
-  transition: opacity 0.1s 0.05s ease-in-out;
 }
 .type--dishes .dish:hover .dish__check {
-  width: 23%;
+  transform: translateX(0);
 }
-.type--dishes .dish:hover .dish__check .fa-circle-check {
-  opacity: 1;
+.type--dishes .dish:hover .euro {
+  margin-right: 0.5rem;
 }
 
 @media (min-width: 1024px) {
@@ -189,5 +190,8 @@ header .content .fa-arrow-left {
   }
   .type {
     width: 634px;
+  }
+  .type--dishes .dish__check {
+    transform: translateX(100px);
   }
 }/*# sourceMappingURL=menu.css.map */

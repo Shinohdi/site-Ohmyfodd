@@ -100,6 +100,7 @@ header .content .fa-arrow-left {
   gap: 15px;
 }
 .type--dishes .dish {
+  position: relative;
   display: flex;
   overflow: hidden;
   width: 95%;
@@ -133,16 +134,17 @@ header .content .fa-arrow-left {
   top: 41px;
   color: #353535;
   font-size: 15px;
-  margin-right: -4rem;
-  margin-left: 10px;
+  margin-right: 0.75rem;
   transition: margin-right 0.3s ease-in-out;
 }
 .type--dishes .dish__check {
+  position: absolute;
+  right: 0;
   width: 23%;
   max-width: 80px;
+  height: 100%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  height: 100%;
   transform: translateX(80px);
   background-color: #99E2D0;
   transition: transform 0.3s ease-in-out;
@@ -154,7 +156,7 @@ header .content .fa-arrow-left {
   transform: translateX(0);
 }
 .type--dishes .dish:hover .euro {
-  margin-right: 0.5rem;
+  margin-right: 5.5rem;
 }
 
 @media (min-width: 1024px) {

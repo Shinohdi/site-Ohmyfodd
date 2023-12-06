@@ -61,12 +61,12 @@ main {
   min-height: 2030px;
   opacity: 1;
   background-color: white;
-  animation: op 0.2s 3s both;
+  animation: op 0.2s 2s both;
 }
 .loader img {
   margin-bottom: 1350px;
   width: 262px;
-  animation: rot 1.5s ease infinite;
+  animation: rot 1s ease infinite;
 }
 
 @keyframes op {

@@ -129,6 +129,7 @@ header{
         gap: 15px;
 
         .dish{
+            position: relative;
             display: flex;
             overflow: hidden;
             width: 95%;
@@ -171,19 +172,22 @@ header{
                 color: $background-thirdcolor;
                 font-size: 15px;             
             
-                margin-right: -4rem;
-                margin-left: 10px;
+                margin-right: 0.75rem;
 
                 transition : margin-right 0.3s ease-in-out;
 
             }
 
             &__check{
+                position: absolute;
+                right: 0;
+                
                 width: 23%;
                 max-width: 80px;
+                height: 100%;
+
                 border-top-right-radius: 15px;
                 border-bottom-right-radius: 15px;
-                height: 100%;
 
                 transform: translateX(80px);
                 background-color: $green-secondcolor;
@@ -200,7 +204,7 @@ header{
                 }
 
                 .euro{
-                    margin-right: 0.5rem;
+                    margin-right: 5.5rem;
                 }
             }
         }

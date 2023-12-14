@@ -8,6 +8,7 @@ $green-maincolor: #008766;
 $green-secondcolor: #99E2D0;
 
 $purple-maincolor:#9356DC;
+$maingradient: linear-gradient(0deg, $purple-maincolor -11.44%, #FF79DA 123.93%);
 
 /******* Mixin *******/
 
@@ -85,12 +86,12 @@ main{
     width: 100%;
     min-width: 375px;
     height: 100%;
-    min-height: 2030px;
+    min-height: 2100px;
 
     opacity: 1;
     background-color: white;
 
-    animation: op 0.2s 2s both;
+    animation: op 0.2s 2s forwards;
 
     img{
         margin-bottom: 1350px;
@@ -207,7 +208,7 @@ header{
     color: white;
     box-sizing: border-box;
     border-radius: 25px;
-    background: linear-gradient(0deg, $purple-maincolor -11.44%, #FF79DA 123.93%);
+    background: $maingradient;
     box-shadow: 0px 4px 10px 0px #00000040;
 
     transition: box-shadow 300ms;
@@ -399,7 +400,7 @@ header{
     .fa-solid{
         opacity: 0;
 
-        background: linear-gradient(0deg, $purple-maincolor -11.44%, #FF79DA 123.93%);
+        background: $maingradient;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 

@@ -58,10 +58,10 @@ main {
   width: 100%;
   min-width: 375px;
   height: 100%;
-  min-height: 2030px;
+  min-height: 2100px;
   opacity: 1;
   background-color: white;
-  animation: op 0.2s 2s both;
+  animation: op 0.2s 2s forwards;
 }
 .loader img {
   margin-bottom: 1350px;

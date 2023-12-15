@@ -313,6 +313,7 @@ header {
 .heart .fa-solid {
   opacity: 0;
   background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

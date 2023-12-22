@@ -70,7 +70,6 @@ a{
 body{
     margin: 0;
     min-width: 375px;
-    
 }
 
 main{
@@ -115,6 +114,7 @@ main{
     100%{
         opacity: 0;
         display: none;
+        z-index: -1;
     }
     
 }
@@ -459,7 +459,6 @@ footer{
 }
 
 @media (min-width: 1024px) {
-
     .loader{
         min-height: 1319px;
 
